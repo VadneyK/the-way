@@ -82,8 +82,8 @@ The most holy moments in the game have **no music**. The game trains you to asso
 | localStorage | Save data (no account needed) |
 
 ### Free Assets Used
-- Sprites: Generated programmatically (Kenney.nl & OpenGameArt.org for future art)
-- Music: OpenGameArt.org CC0 + AI-generated via Suno/Udio
+- Sprites and tiles: Kenney's Tiny Town and Roguelike Characters packs (CC0, kenney.nl), loaded in BootScene; the Tiny Dungeon pack (CC0) is bundled for future scenes. Everything else is drawn with Phaser graphics primitives.
+- Audio: synthesised at runtime with the Web Audio API (see AudioSystem.ts); no audio files ship with the game.
 - Fonts: Press Start 2P (OFL), Crimson Text (OFL)
 
 ---
