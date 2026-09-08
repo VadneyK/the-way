@@ -80,11 +80,11 @@ export class NicodemusScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Sky — very dark blue, full map
+    // Sky: very dark blue, full map
     g.fillStyle(0x060810);
     g.fillRect(0, 0, MAP_W, MAP_H);
 
-    // Stars — fixed positions for determinism, spread across first 60px height
+    // Stars: fixed positions for determinism, spread across first 60px height
     g.fillStyle(0xffffff);
     const starPositions = [
       [12,5],[30,12],[55,3],[78,18],[100,8],[125,15],[148,4],[165,10],
@@ -101,7 +101,7 @@ export class NicodemusScene extends Phaser.Scene {
     g.fillRect(180, 22, 2, 2);
     g.fillRect(260, 12, 2, 2);
 
-    // Rooftop floor — stone
+    // Rooftop floor: stone
     g.fillStyle(0x1e1a14);
     g.fillRect(0, 100, MAP_W, MAP_H - 100);
     // Stone texture
@@ -118,7 +118,7 @@ export class NicodemusScene extends Phaser.Scene {
     g.fillRect(MAP_W - 14, 96, 14, MAP_H - 96); // right wall
     g.fillRect(0, 94, MAP_W, 8);            // back parapet
 
-    // Lantern — orange glow at (80, 110)
+    // Lantern: orange glow at (80, 110)
     g.fillStyle(0xff9020);
     g.fillCircle(80, 110, 8);
     g.fillStyle(0xffb040);
@@ -148,7 +148,7 @@ export class NicodemusScene extends Phaser.Scene {
     g.fillStyle(0x3a2a10);
     g.fillRect(238, 102, 4, 10);
 
-    // Potted plants — dark silhouettes
+    // Potted plants: dark silhouettes
     g.fillStyle(0x0e1808);
     g.fillEllipse(30, 108, 14, 8);
     g.fillRect(26, 106, 8, 8);
@@ -172,7 +172,7 @@ export class NicodemusScene extends Phaser.Scene {
   }
 
   private drawLocationLabel() {
-    const label = this.add.text(160, 52, 'NICODEMUS — NIGHT', {
+    const label = this.add.text(160, 52, 'NICODEMUS, NIGHT', {
       fontFamily: '"Press Start 2P", monospace',
       fontSize: '6px', color: '#8898cc', resolution: 3,
     }).setOrigin(0.5).setScrollFactor(0).setDepth(201);
@@ -226,9 +226,9 @@ export class NicodemusScene extends Phaser.Scene {
   }
 
   private afterNicodemusDialogue() {
-    // Wind effect — camera shake 400ms
+    // Wind effect: camera shake 400ms
     this.cameras.main.shake(400, 0.006);
-    // Light intensity — brief flash
+    // Light intensity: brief flash
     this.time.delayedCall(200, () => {
       this.cameras.main.flash(300, 180, 200, 255, true);
     });

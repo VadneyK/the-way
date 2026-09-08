@@ -83,7 +83,7 @@ export class EncounterSystem {
   }
 
   private createUI() {
-    const d = 300; // depth — above everything
+    const d = 300; // depth, above everything
 
     // === Animated background pattern (EarthBound-style checker) ===
     this.bgPattern = this.scene.add.graphics()
@@ -135,7 +135,7 @@ export class EncounterSystem {
   }
 
   private drawBackground() {
-    // Parchment/stone tile checker — EarthBound-style background break
+    // Parchment/stone tile checker: EarthBound-style background break
     this.bgPattern.clear();
     const tileSize = 10;
     for (let row = 0; row < Math.ceil(H / tileSize); row++) {
@@ -146,7 +146,7 @@ export class EncounterSystem {
       }
     }
 
-    // Main overlay — semi-transparent over the checker
+    // Main overlay: semi-transparent over the checker
     this.overlay.clear();
     this.overlay.fillStyle(0x0a0806, 0.88);
     this.overlay.fillRect(0, 0, W, H);
@@ -230,7 +230,7 @@ export class EncounterSystem {
     this.active = true;
     this.npcKey = config.npcTextureKey ?? config.npcName.toLowerCase();
 
-    // Flash in — camera flash then show
+    // Flash in: camera flash then show
     this.scene.cameras.main.flash(200, 0, 0, 0, true);
     this.scene.time.delayedCall(180, () => this.show(config));
   }
@@ -255,7 +255,7 @@ export class EncounterSystem {
 
     this.buildOptions();
 
-    // Animate options in — stagger from left
+    // Animate options in: stagger from left
     this.optionTexts.forEach((t, i) => {
       t.setAlpha(0);
       this.scene.tweens.add({ targets: t, alpha: 1, delay: 80 + i * 60, duration: 120 });

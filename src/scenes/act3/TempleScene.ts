@@ -81,11 +81,11 @@ export class TempleScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Background — grand stone
+    // Background: grand stone
     g.fillStyle(0x2a2218);
     g.fillRect(0, 0, MAP_W, MAP_H);
 
-    // Floor — polished stone
+    // Floor: polished stone
     g.fillStyle(0x3a3028);
     g.fillRect(0, 80, MAP_W, MAP_H - 80);
     // Floor tile pattern
@@ -96,7 +96,7 @@ export class TempleScene extends Phaser.Scene {
       }
     }
 
-    // Columns — 4 tall rectangles
+    // Columns: 4 tall rectangles
     const columnXs = [40, 100, 220, 280];
     for (const cx of columnXs) {
       g.fillStyle(0x4a4030);
@@ -208,7 +208,7 @@ export class TempleScene extends Phaser.Scene {
         save = applyEncounterChoice(save, action);
 
         if (action !== 'pass') {
-          // Jesus and poor woman interact — widow's mite
+          // Jesus and poor woman interact: widow's mite
           this.time.delayedCall(300, () => {
             this.dialogue.start({
               lines: [

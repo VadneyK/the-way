@@ -13,7 +13,7 @@ export function fadeIn(scene: Phaser.Scene, duration = 600) {
   scene.cameras.main.fadeIn(duration, 13, 10, 7);
 }
 
-/** Flash white — for miracles, cosmic moments */
+/** Flash white, for miracles, cosmic moments */
 export function holyFlash(scene: Phaser.Scene, duration = 200) {
   scene.cameras.main.flash(duration, 255, 255, 240, true);
 }

@@ -1,69 +1,69 @@
 {
   "andrew_intro": [
     { "speaker": "Andrew", "text": "You've heard about him, haven't you? The teacher from Nazareth.", "nameColor": "0xc9a84c" },
-    { "speaker": "Andrew", "text": "He came right here, to this dock. Looked at me — really looked at me — and said, 'Follow me.'", "nameColor": "0xc9a84c" },
+    { "speaker": "Andrew", "text": "He came right here, to this dock. Looked at me, really looked at me, and said, 'Follow me.'", "nameColor": "0xc9a84c" },
     { "speaker": "Andrew", "text": "I dropped my net. Didn't even think about it. First time in my life I've done anything without thinking.", "nameColor": "0xc9a84c" },
-    { "speaker": "Andrew", "text": "My brother Simon thought I'd gone mad. Maybe I had. Come on — I'll tell you everything.", "nameColor": "0xc9a84c" }
+    { "speaker": "Andrew", "text": "My brother Simon thought I'd gone mad. Maybe I had. Come on, I'll tell you everything.", "nameColor": "0xc9a84c" }
   ],
 
   "andrew_encounter": {
-    "situation": "A young fisherman struggles alone with a heavy, tangled net on the dock. He keeps pausing to look up the road — like he's waiting for someone. Or maybe hoping to tell someone something."
+    "situation": "A young fisherman struggles alone with a heavy, tangled net on the dock. He keeps pausing to look up the road, like he's waiting for someone. Or maybe hoping to tell someone something."
   },
 
   "andrew_listen": [
     { "speaker": "Andrew", "text": "I was there when he healed a man in the synagogue at Capernaum. Right in the middle of the service.", "nameColor": "0xc9a84c" },
-    { "speaker": "Andrew", "text": "The man started shouting — some kind of unclean spirit in him. Everyone froze. The elders didn't know what to do.", "nameColor": "0xc9a84c" },
+    { "speaker": "Andrew", "text": "The man started shouting, some kind of unclean spirit in him. Everyone froze. The elders didn't know what to do.", "nameColor": "0xc9a84c" },
     { "speaker": "Andrew", "text": "Jesus just... stood up. Calm as the sea at dawn. Said, 'Be quiet. Come out of him.'", "nameColor": "0xc9a84c" },
-    { "speaker": "Andrew", "text": "The man fell down. And then he stood up — clean. Himself again. People were shaking. I was shaking. Nobody teaches like that. Nobody.", "nameColor": "0xc9a84c" }
+    { "speaker": "Andrew", "text": "The man fell down. And then he stood up, clean. Himself again. People were shaking. I was shaking. Nobody teaches like that. Nobody.", "nameColor": "0xc9a84c" }
   ],
 
   "andrew_serve": [
-    { "speaker": "Andrew", "text": "Oh — thank you, truly. My fingers are so torn up I can barely feel them anymore.", "nameColor": "0xc9a84c" },
-    { "speaker": "Andrew", "text": "He told us to leave all of it behind. The nets, the boat, the whole life. Peter — my brother — he just laughed at me.", "nameColor": "0xc9a84c" },
+    { "speaker": "Andrew", "text": "Oh, thank you, truly. My fingers are so torn up I can barely feel them anymore.", "nameColor": "0xc9a84c" },
+    { "speaker": "Andrew", "text": "He told us to leave all of it behind. The nets, the boat, the whole life. Peter, my brother, he just laughed at me.", "nameColor": "0xc9a84c" },
     { "speaker": "Andrew", "text": "But I keep coming back to mend these nets anyway. I don't know why. Maybe I'm not ready to let go of everything just yet. Or maybe I just don't want Peter to starve.", "nameColor": "0xc9a84c" }
   ],
 
   "andrew_pray": [
     { "speaker": "Andrew", "text": "...You're praying? For me? Right here on the dock?", "nameColor": "0xc9a84c" },
-    { "speaker": "Andrew", "text": "He does that. Jesus. Slips away before any of us are awake — out to some empty hillside. Gone for hours. I used to wonder what he could possibly be saying for so long.", "nameColor": "0xc9a84c" },
+    { "speaker": "Andrew", "text": "He does that. Jesus. Slips away before any of us are awake, out to some empty hillside. Gone for hours. I used to wonder what he could possibly be saying for so long.", "nameColor": "0xc9a84c" },
     { "speaker": "Andrew", "text": "I think I'm starting to understand. Thank you. That means more than you know.", "nameColor": "0xc9a84c" }
   ],
 
   "peter_intro": [
     { "speaker": "Peter", "text": "Another one asking about the teacher? Can't a man mend his nets in peace?", "nameColor": "0xe07050" },
     { "speaker": "Peter", "text": "My brother Andrew has been filling your head with stories, I take it. 'The Messiah, Simon. He's the one, Simon.' Every single morning.", "nameColor": "0xe07050" },
-    { "speaker": "Peter", "text": "I'm a fisherman. I deal in what I can hold. What I can weigh. Now leave me be — this net won't fix itself.", "nameColor": "0xe07050" }
+    { "speaker": "Peter", "text": "I'm a fisherman. I deal in what I can hold. What I can weigh. Now leave me be, this net won't fix itself.", "nameColor": "0xe07050" }
   ],
 
   "nicodemus_intro": [
-    { "speaker": "Nicodemus", "text": "I — forgive me. I was looking for... that is to say...", "nameColor": "0x4a8a4a" },
+    { "speaker": "Nicodemus", "text": "I... forgive me. I was looking for... that is to say...", "nameColor": "0x4a8a4a" },
     { "speaker": "Nicodemus", "text": "I have studied the Torah my entire life. Forty years. And yet there are questions I cannot answer. Questions this man from Galilee seems to... unsettle, rather than resolve.", "nameColor": "0x4a8a4a" },
     { "speaker": "Nicodemus", "text": "I intend to speak with him. Privately. At night, when my colleagues on the council will not see. Does that make me a coward, do you think?", "nameColor": "0x4a8a4a" }
   ],
 
   "child_intro": [
-    { "speaker": "Child", "text": "Did you hear?! A man in the market said the teacher made a man walk — his legs were all twisted and then they WEREN'T! Just like that!" },
-    { "speaker": "Child", "text": "My abba says not to believe everything I hear. But the man who told us — he was crying. You don't cry about a lie, do you?" }
+    { "speaker": "Child", "text": "Did you hear?! A man in the market said the teacher made a man walk, his legs were all twisted and then they WEREN'T! Just like that!" },
+    { "speaker": "Child", "text": "My abba says not to believe everything I hear. But the man who told us, he was crying. You don't cry about a lie, do you?" }
   ],
 
   "peter_call": [
     { "speaker": "Jesus", "text": "Simon.", "nameColor": "0xfff4cc" },
-    { "speaker": "Peter", "text": "Rabbi. I — yes. What do you want with me?", "nameColor": "0xe07050" },
+    { "speaker": "Peter", "text": "Rabbi. I... yes. What do you want with me?", "nameColor": "0xe07050" },
     { "speaker": "Jesus", "text": "You have fished these waters all your life and come up empty. Push out to the deep water. Let down your nets.", "nameColor": "0xfff4cc" },
     { "speaker": "Peter", "text": "Master... we worked through the whole night. Nothing. Not even a sardine.", "nameColor": "0xe07050" },
     { "speaker": "Peter", "text": "But... because you say so. I'll let them down.", "nameColor": "0xe07050" },
-    { "speaker": "narrator", "text": "The nets fill. Then both boats — full to sinking. Peter looks at his shaking hands. He falls to his knees on the wet deck." },
+    { "speaker": "narrator", "text": "The nets fill. Then both boats, full to sinking. Peter looks at his shaking hands. He falls to his knees on the wet deck." },
     { "speaker": "Peter", "text": "Go away from me, Lord. I am a sinful man.", "nameColor": "0xe07050" },
-    { "speaker": "Jesus", "text": "Don't be afraid, Simon. Follow me — and I will make you a fisher of men.", "nameColor": "0xfff4cc" },
+    { "speaker": "Jesus", "text": "Don't be afraid, Simon. Follow me, and I will make you a fisher of men.", "nameColor": "0xfff4cc" },
     { "speaker": "narrator", "text": "They pulled the boats onto shore. Left everything. And followed him." }
   ],
 
   "scroll_call_of_disciples": {
-    "title": "The Call — Leaving Everything",
-    "otRoot": "The pattern of divine calling runs deep in Israel's memory. When Elijah found Elisha plowing with twelve yoke of oxen (1 Kings 19:19–21), he threw his cloak over him without a word. Elisha ran after him, asked only to say goodbye to his parents, then slaughtered his oxen and burned the plow — an irreversible act. There was no going back. The same urgency echoes centuries later on the shore of Galilee: a cloak thrown, nets abandoned, a life surrendered on the spot.",
+    "title": "The Call, Leaving Everything",
+    "otRoot": "The pattern of divine calling runs deep in Israel's memory. When Elijah found Elisha plowing with twelve yoke of oxen (1 Kings 19:19–21), he threw his cloak over him without a word. Elisha ran after him, asked only to say goodbye to his parents, then slaughtered his oxen and burned the plow, an irreversible act. There was no going back. The same urgency echoes centuries later on the shore of Galilee: a cloak thrown, nets abandoned, a life surrendered on the spot.",
     "hebrewWord": "אָחַר / achar (Heb.) → ἀκολουθέω / akoloutheo (Gk.)",
-    "hebrewMeaning": "The Greek akoloutheo — 'to follow' — carries the sense of walking the same road as another, conforming your steps to theirs. It is the word of apprenticeship, of loyalty, of choosing one direction over all others. In the Synoptic Gospels it is nearly always used of following Jesus specifically, never casually. To 'follow' in this sense is not to trail behind — it is to reorient the whole self.",
-    "narrativeArc": "Act I turns on this moment: ordinary men in an ordinary trade, interrupted. The calling of Andrew, Peter, James, and John is not a recruitment — it is a rupture. Jesus does not explain his credentials, outline a mission statement, or offer incentives. He speaks two words and walks. What compels a man to drop his livelihood, leave his father in the boat, and go? The text does not say. The silence is the point. Something in the call itself carries authority that argument never could."
+    "hebrewMeaning": "The Greek akoloutheo, 'to follow', carries the sense of walking the same road as another, conforming your steps to theirs. It is the word of apprenticeship, of loyalty, of choosing one direction over all others. In the Synoptic Gospels it is nearly always used of following Jesus specifically, never casually. To 'follow' in this sense is not to trail behind, it is to reorient the whole self.",
+    "narrativeArc": "Act I turns on this moment: ordinary men in an ordinary trade, interrupted. The calling of Andrew, Peter, James, and John is not a recruitment, it is a rupture. Jesus does not explain his credentials, outline a mission statement, or offer incentives. He speaks two words and walks. What compels a man to drop his livelihood, leave his father in the boat, and go? The text does not say. The silence is the point. Something in the call itself carries authority that argument never could."
   },
 
   "call_of_peter": {
@@ -75,7 +75,7 @@
     ],
     "jesus_approaches": [
       { "speaker": "Jesus", "text": "Simon." },
-      { "speaker": "Simon Peter", "text": "Rabbi. I— yes." },
+      { "speaker": "Simon Peter", "text": "Rabbi. I... yes." },
       { "speaker": "Jesus", "text": "Put out into the deep water. Let down your nets for a catch." },
       { "speaker": "Simon Peter", "text": "Master... we worked hard all night and caught nothing." },
       { "speaker": "Simon Peter", "text": "But... because you say so, I will let down the nets." }
@@ -119,7 +119,7 @@
   },
 
   "woman_at_well": {
-    "situation": "Noon. The hottest part of the day. A woman comes to Jacob's Well alone — when no one else would be here.",
+    "situation": "Noon. The hottest part of the day. A woman comes to Jacob's Well alone, when no one else would be here.",
     "greeting": [
       { "speaker": "Jesus", "text": "Will you give me a drink?" },
       { "speaker": "Woman", "text": "You are a Jew and I am a Samaritan woman. How can you ask me for a drink?" },
@@ -143,7 +143,7 @@
       { "speaker": "Jesus", "text": "Yet a time is coming and has now come when the true worshipers will worship the Father in the Spirit and in truth." },
       { "speaker": "Jesus", "text": "For they are the kind of worshipers the Father seeks." },
       { "speaker": "Woman", "text": "I know that Messiah is coming. When he comes, he will explain everything to us." },
-      { "speaker": "Jesus", "text": "I, the one speaking to you — I am he." },
+      { "speaker": "Jesus", "text": "I, the one speaking to you, am he." },
       { "speaker": "narrator", "text": "She left her water jar. She went back to the town." },
       { "speaker": "Woman", "text": "Come, see a man who told me everything I ever did." }
     ],
@@ -154,7 +154,7 @@
   },
 
   "sermon_beatitudes": {
-    "situation": "The hillside above the Sea of Galilee. Thousands have gathered. He sits down — which is how teachers teach. He opens his mouth.",
+    "situation": "The hillside above the Sea of Galilee. Thousands have gathered. He sits down, which is how teachers teach. He opens his mouth.",
     "beatitudes": [
       { "speaker": "Jesus", "text": "Blessed are the poor in spirit, for theirs is the kingdom of heaven." },
       { "speaker": "Jesus", "text": "Blessed are those who mourn, for they will be comforted." },

@@ -1,5 +1,5 @@
 /**
- * Typewriter utility — steps through a string char by char.
+ * Typewriter utility: steps through a string char by char.
  * Used by DialogueSystem for Undertale-style text reveal.
  */
 export class Typewriter {

@@ -40,7 +40,7 @@ export class DialogueSystem {
   }
 
   private createUI() {
-    // All elements use setScrollFactor(0) — screen-fixed, not world-positioned
+    // All elements use setScrollFactor(0): screen-fixed, not world-positioned
     this.box = this.scene.add.graphics()
       .setDepth(100).setScrollFactor(0);
 

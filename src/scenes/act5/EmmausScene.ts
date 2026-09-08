@@ -98,7 +98,7 @@ export class EmmausScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics().setDepth(0);
 
-    // Sky — amber-gold to blue gradient across full width
+    // Sky: amber-gold to blue gradient across full width
     for (let x = 0; x < MAP_W; x += 4) {
       const skyT = x / MAP_W;
       const r = Math.floor(0xe8 - (0xe8 - 0x60) * skyT);
@@ -109,7 +109,7 @@ export class EmmausScene extends Phaser.Scene {
       g.fillRect(x, 0, 4, 40);
     }
 
-    // Rolling hills — silhouettes both sides
+    // Rolling hills: silhouettes both sides
     g.fillStyle(0x4a6a2a);
     // Bottom hills running full width
     for (let hx = 0; hx < MAP_W; hx += 80) {
@@ -122,7 +122,7 @@ export class EmmausScene extends Phaser.Scene {
       g.fillEllipse(hx + 60, 60, 140, 40);
     }
 
-    // Road — long dirt path
+    // Road: long dirt path
     g.fillStyle(0xc0a060);
     g.fillRect(0, 90, MAP_W, 30);
 
@@ -133,7 +133,7 @@ export class EmmausScene extends Phaser.Scene {
       g.fillRect(rx + 20, 108, 12, 3);
     }
 
-    // Road edges — slightly darker
+    // Road edges: slightly darker
     g.fillStyle(0x9a7840);
     g.fillRect(0, 90, MAP_W, 3);
     g.fillRect(0, 117, MAP_W, 3);
@@ -315,7 +315,7 @@ export class EmmausScene extends Phaser.Scene {
                 },
                 {
                   speaker: 'Disciple',
-                  text: '"He explained the Scriptures to us — and we knew him in the breaking of the bread."',
+                  text: '"He explained the Scriptures to us, and we knew him in the breaking of the bread."',
                 },
               ],
               onComplete: () => {
@@ -379,7 +379,7 @@ export class EmmausScene extends Phaser.Scene {
     if (!this.milestone600 && px > 600) {
       this.milestone600 = true;
       this.showScriptureCard(
-        'The Hebrew word \'Shalom\' —\npeace, wholeness,\nnothing missing, nothing broken.',
+        'The Hebrew word \'Shalom\', \npeace, wholeness,\nnothing missing, nothing broken.',
       );
     }
     if (!this.milestone800 && px > 800) {
@@ -387,7 +387,7 @@ export class EmmausScene extends Phaser.Scene {
       this.showScriptureCard('"Were not our hearts burning within us while he talked with us on the road?"');
     }
 
-    // Arrival at Emmaus — inn appears ahead
+    // Arrival at Emmaus: inn appears ahead
     if (!this.milestoneArrived && px > 850) {
       this.milestoneArrived = true;
       const arrivalLabel = this.add.text(160, 40, 'EMMAUS', {

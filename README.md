@@ -1,6 +1,6 @@
 # The Way
 
-> *"I am the way and the truth and the life."* — John 14:6
+> *"I am the way and the truth and the life."* (John 14:6)
 
 A deeply biblical, open-source pixel art RPG that helps you walk alongside Jesus Christ. Inspired by EarthBound/Mother, Undertale, The Chosen, and Bible Project.
 
@@ -10,11 +10,11 @@ A deeply biblical, open-source pixel art RPG that helps you walk alongside Jesus
 
 ## What is this?
 
-**The Way** is a browser-based pixel art RPG where you follow Jesus through the Gospels — not as a spectator, but as someone who was there.
+**The Way** is a browser-based pixel art RPG where you follow Jesus through the Gospels: not as a spectator, but as someone who was there.
 
 Every encounter is a choice: LISTEN. SERVE. PRAY. PASS BY.
 
-Every major story unlocks a **Scroll Room** — Bible Project-style cards revealing the OT roots, Hebrew/Greek word studies, and how this moment connects to the grand narrative arc from Genesis to Revelation.
+Every major story unlocks a **Scroll Room**: Bible Project-style cards revealing the OT roots, Hebrew/Greek word studies, and how this moment connects to the grand narrative arc from Genesis to Revelation.
 
 Your choices are tracked through the **LOVE system** (Level of Virtue Expressed). The world remembers. The story deepens.
 
@@ -34,13 +34,13 @@ Your choices are tracked through the **LOVE system** (Level of Virtue Expressed)
 
 ## Game Structure
 
-**Season 1: "The Son of Man"** — 5 Acts through the Gospels
+**Season 1: "The Son of Man"**: 5 Acts through the Gospels
 
-- **Act I — Galilee**: Andrew, Peter's call, Cana, the paralytic  
-- **Act II — The Mountain**: Sermon on the Mount, feeding the 5,000  
-- **Act III — Jerusalem**: Nicodemus, the woman caught in adultery, the Last Supper  
-- **Act IV — The Passion**: Gethsemane, the trial, the cross  
-- **Act V — Resurrection**: The empty tomb, Emmaus, restoration of Peter  
+- **Act I, Galilee**: Andrew, Peter's call, Cana, the paralytic  
+- **Act II, The Mountain**: Sermon on the Mount, feeding the 5,000  
+- **Act III, Jerusalem**: Nicodemus, the woman caught in adultery, the Last Supper  
+- **Act IV, The Passion**: Gethsemane, the trial, the cross  
+- **Act V, Resurrection**: The empty tomb, Emmaus, restoration of Peter  
 
 ---
 
@@ -48,10 +48,10 @@ Your choices are tracked through the **LOVE system** (Level of Virtue Expressed)
 
 ### The Encounter System
 When you approach someone in need, you can:
-- **LISTEN** — hear their story
-- **SERVE** — act on their need  
-- **PRAY** — intercede for them
-- **PASS BY** — continue on your way (always an option; the game never forces virtue)
+- **LISTEN**: hear their story
+- **SERVE**: act on their need  
+- **PRAY**: intercede for them
+- **PASS BY**: continue on your way (always an option; the game never forces virtue)
 
 ### The LOVE System
 Your choices build toward **L**evel **o**f **V**irtue **E**xpressed:
@@ -61,9 +61,9 @@ Your choices build toward **L**evel **o**f **V**irtue **E**xpressed:
 
 ### The Scroll Room
 After each major encounter, a Bible Project-style overlay reveals:
-1. **The OT Root** — what Ezekiel, Isaiah, or Moses said that Jesus is fulfilling
-2. **Word Study** — the Hebrew or Greek behind the key word (e.g., *anothen* in John 3)
-3. **The Narrative Arc** — how this scene fits Genesis → Revelation *(unlocked at Following)*
+1. **The OT Root**: what Ezekiel, Isaiah, or Moses said that Jesus is fulfilling
+2. **Word Study**: the Hebrew or Greek behind the key word (e.g., *anothen* in John 3)
+3. **The Narrative Arc**: how this scene fits Genesis → Revelation *(unlocked at Following)*
 4. **New Creation Echo** *(unlocked at Abiding)*
 5. **Deep Dive** *(unlocked at Bearing Fruit)*
 
@@ -110,7 +110,7 @@ All dialogue content is reviewed for biblical accuracy. Major scripture decision
 
 ## License
 
-MIT — free to use, adapt, and share. If you build something with this, we'd love to know.
+MIT, free to use, adapt, and share. If you build something with this, we'd love to know.
 
 ---
 

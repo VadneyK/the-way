@@ -3,7 +3,7 @@ import { Player } from '../../entities/Player';
 import { DialogueSystem } from '../../systems/DialogueSystem';
 import { fadeToScene } from '../../utils/pixelTransition';
 
-// No music — silence IS the sound here.
+// No music: silence IS the sound here.
 
 const MAP_W = 320;
 const MAP_H = 180;
@@ -22,13 +22,13 @@ export class PassionScene extends Phaser.Scene {
       this.buildMap();
       this.createPlayer();
 
-      // Player is frozen throughout — invisible cinematic
+      // Player is frozen throughout: invisible cinematic
       this.player.frozen = true;
       this.player.setAlpha(0);
 
       this.dialogue = new DialogueSystem(this);
 
-      // No input captured — this is a pure cinematic
+      // No input captured: this is a pure cinematic
 
       this.cameras.main.setBounds(0, 0, MAP_W, MAP_H);
       this.physics.world.setBounds(0, 0, MAP_W, MAP_H);
@@ -53,11 +53,11 @@ export class PassionScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Background — very dark brown-black
+    // Background: very dark brown-black
     g.fillStyle(0x080604);
     g.fillRect(0, 0, MAP_W, MAP_H);
 
-    // Hill silhouette (Golgotha) — simple triangle/polygon centered
+    // Hill silhouette (Golgotha): simple triangle/polygon centered
     g.fillStyle(0x100c08);
     // Triangle: base at y=MAP_H, peak at roughly (160, 80)
     const hillPoints = [
@@ -69,7 +69,7 @@ export class PassionScene extends Phaser.Scene {
     ];
     g.fillPoints(hillPoints, true);
 
-    // Ground — black
+    // Ground: black
     g.fillStyle(0x050302);
     g.fillRect(0, MAP_H - 10, MAP_W, 10);
 
@@ -77,7 +77,7 @@ export class PassionScene extends Phaser.Scene {
     g.fillStyle(0x403848, 0.6);
     g.fillRect(60, 20, 1, 1);
 
-    // The Cross — drawn via graphics, stored in this.cross for animation
+    // The Cross: drawn via graphics, stored in this.cross for animation
     this.cross = this.add.graphics();
     this.drawCross(false);
   }
@@ -101,7 +101,7 @@ export class PassionScene extends Phaser.Scene {
       this.cameras.main.fadeIn(3000, 8, 6, 4);
     });
 
-    // Step 2: After 2000ms total — first word from the cross
+    // Step 2: After 2000ms total: first word from the cross
     this.time.delayedCall(2000, () => {
       this.dialogue.start({
         lines: [
@@ -158,7 +158,7 @@ export class PassionScene extends Phaser.Scene {
   }
 
   private createPlayer() {
-    // Player exists but is invisible — cinematic only
+    // Player exists but is invisible: cinematic only
     this.player = new Player(this, 160, 160);
   }
 

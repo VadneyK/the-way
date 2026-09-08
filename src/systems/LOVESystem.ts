@@ -5,7 +5,7 @@ import type { EncounterAction } from './EncounterSystem';
  * LOVE = Level of Virtue Expressed
  * Tracks compassion, faithfulness, and faith across all choices.
  * The higher the LOVE, the richer the world becomes.
- * The game never shames a low LOVE score — it simply reflects reality.
+ * The game never shames a low LOVE score: it simply reflects reality.
  */
 
 const XP_REWARDS: Record<EncounterAction, number> = {

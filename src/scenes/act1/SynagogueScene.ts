@@ -83,15 +83,15 @@ export class SynagogueScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Background — very dark stone
+    // Background: very dark stone
     g.fillStyle(0x1a1610);
     g.fillRect(0, 0, MAP_W, MAP_H);
 
-    // Floor — dark stone tiles
+    // Floor: dark stone tiles
     g.fillStyle(0x2a2420);
     g.fillRect(0, 30, MAP_W, 150);
 
-    // Floor texture — subtle stone lines
+    // Floor texture: subtle stone lines
     g.fillStyle(0x221e18);
     for (let x = 0; x < MAP_W; x += 20) {
       g.fillRect(x, 30, 1, 150);
@@ -116,34 +116,34 @@ export class SynagogueScene extends Phaser.Scene {
     g.fillStyle(0x2e2820);
     g.fillRect(120, 0, 80, 36);
 
-    // Torah Ark — centered back wall
+    // Torah Ark: centered back wall
     g.fillStyle(0x8b6914);
     g.fillRect(130, 4, 60, 32);
     g.fillStyle(0x1a0800);
     g.fillRect(136, 8, 48, 24);
 
-    // Bimah — raised reading platform, center of room
+    // Bimah: raised reading platform, center of room
     g.fillStyle(0x3a2a18);
     g.fillRect(120, 80, 80, 20);
-    // Slightly raised appearance — lighter top, darker bottom edge
+    // Slightly raised appearance: lighter top, darker bottom edge
     g.fillStyle(0x4a3a28);
     g.fillRect(120, 80, 80, 2);
     g.fillStyle(0x2a1a08);
     g.fillRect(120, 98, 80, 2);
 
-    // Stone benches — left side
+    // Stone benches: left side
     g.fillStyle(0x2a2218);
     g.fillRect(25, 100, 60, 10);
     g.fillRect(25, 130, 60, 10);
     g.fillRect(25, 160, 60, 10);
 
-    // Stone benches — right side
+    // Stone benches: right side
     g.fillStyle(0x2a2218);
     g.fillRect(235, 100, 60, 10);
     g.fillRect(235, 130, 60, 10);
     g.fillRect(235, 160, 60, 10);
 
-    // Torches — 4 sconces on walls
+    // Torches: 4 sconces on walls
     const torchPositions: Array<[number, number]> = [
       [25, 50], [25, 130], [295, 50], [295, 130],
     ];
@@ -159,7 +159,7 @@ export class SynagogueScene extends Phaser.Scene {
       g.fillCircle(tx, ty + 1, 2);
     });
 
-    // Exit — southern doorway
+    // Exit: southern doorway
     g.fillStyle(0x3a3020);
     g.fillRect(130, 190, 60, 12);
     // Bright opening hint
@@ -179,7 +179,7 @@ export class SynagogueScene extends Phaser.Scene {
     this.addWall(235, 160, 60,    10);   // bench right 3
     this.walls.refresh();
 
-    // Animated torch glow — added after static map drawn
+    // Animated torch glow: added after static map drawn
     torchPositions.forEach(([tx, ty]) => {
       this.addTorchGlow(tx, ty);
     });
@@ -233,7 +233,7 @@ export class SynagogueScene extends Phaser.Scene {
   // ---------------------------------------------------------------------------
 
   private startTeachingSequence() {
-    // Step 1 — Jesus teaches (auto-trigger)
+    // Step 1: Jesus teaches (auto-trigger)
     this.dialogue.start({
       lines: [
         {
@@ -247,12 +247,12 @@ export class SynagogueScene extends Phaser.Scene {
   }
 
   private triggerAfflictedManCryOut() {
-    // Step 2 — Afflicted man cries out
+    // Step 2: Afflicted man cries out
     this.dialogue.start({
       lines: [
         {
           speaker: 'Afflicted Man',
-          text: 'What have you to do with us, Jesus of Nazareth? Have you come to destroy us? I know who you are — the Holy One of God!',
+          text: 'What have you to do with us, Jesus of Nazareth? Have you come to destroy us? I know who you are, the Holy One of God!',
         },
       ],
       onComplete: () => this.triggerExorcismEncounter(),
@@ -260,7 +260,7 @@ export class SynagogueScene extends Phaser.Scene {
   }
 
   private triggerExorcismEncounter() {
-    // Step 3 — Encounter triggers automatically
+    // Step 3: Encounter triggers automatically
     const save = loadSave();
     this.encounter.start(
       {
@@ -280,15 +280,15 @@ export class SynagogueScene extends Phaser.Scene {
     writeSave(save);
 
     if (action === 'pass') {
-      // PASS path — crowd dialogue only
+      // PASS path: crowd dialogue only
       this.dialogue.start({
         lines: [
-          { speaker: 'Crowd', text: 'What is this? A new teaching — with authority!' },
+          { speaker: 'Crowd', text: 'What is this? A new teaching, with authority!' },
         ],
         onComplete: () => this.finishSequence(),
       });
     } else {
-      // Any other choice — dramatic silence, then Jesus commands, then camera shake
+      // Any other choice: dramatic silence, then Jesus commands, then camera shake
       this.time.delayedCall(800, () => {
         this.dialogue.start({
           lines: [
@@ -435,7 +435,7 @@ export class SynagogueScene extends Phaser.Scene {
 
     this.npcs.forEach(npc => npc.checkProximity(this.player.x, this.player.y));
 
-    // Exit trigger — player reaches southern doorway
+    // Exit trigger: player reaches southern doorway
     if (!this.exitTriggered && this.player.y > 188) {
       this.exitTriggered = true;
       this.cameras.main.fadeOut(400, 0, 0, 0);
