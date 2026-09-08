@@ -8,6 +8,14 @@ A deeply biblical, open-source pixel art RPG that helps you walk alongside Jesus
 
 ---
 
+## Screenshots
+
+| Title | Capernaum (Act I) |
+|---|---|
+| ![Title screen](docs/screenshots/title.png) | ![Capernaum](docs/screenshots/capernaum.png) |
+
+---
+
 ## What is this?
 
 **The Way** is a browser-based pixel art RPG where you follow Jesus through the Gospels — not as a spectator, but as someone who was there.
