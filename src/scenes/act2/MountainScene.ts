@@ -88,7 +88,7 @@ export class MountainScene extends Phaser.Scene {
     g.fillGradientStyle(0x6ab8e8, 0x6ab8e8, 0xe8d880, 0xe8d880);
     g.fillRect(0, 0, MAP_W, 40);
 
-    // Distant water strip — horizon line
+    // Distant water strip: horizon line
     g.fillStyle(0x4a88c8);
     g.fillRect(0, 38, MAP_W, 8);
     // Water shimmer
@@ -120,7 +120,7 @@ export class MountainScene extends Phaser.Scene {
       }
     }
 
-    // Path of rough stone (0x9a8860) — center, meandering up
+    // Path of rough stone (0x9a8860): center, meandering up
     g.fillStyle(0x9a8860);
     g.fillRect(140, 44, 40, 80);   // upper path segment
     g.fillStyle(0x8a7850);
@@ -203,7 +203,7 @@ export class MountainScene extends Phaser.Scene {
     const bystander = new NPC(this, { key: 'villager', name: 'Bystander',  x: 175, y: 190 });
     const follower  = new NPC(this, { key: 'villager', name: 'Follower', x: 300, y: 120 });
 
-    // Crowd fill — atmosphere NPCs arranged in arcs
+    // Crowd fill: atmosphere NPCs arranged in arcs
     const crowd: NPC[] = [
       new NPC(this, { key: 'villager', name: 'Listener', x: 80,  y: 120, interactRadius: 14 }),
       new NPC(this, { key: 'villager', name: 'Listener', x: 130, y: 110, interactRadius: 14 }),
@@ -377,7 +377,7 @@ export class MountainScene extends Phaser.Scene {
   }
 
   // ---------------------------------------------------------------------------
-  // Beatitude 1 — Beggar (poor in spirit)
+  // Beatitude 1: Beggar (poor in spirit)
   // ---------------------------------------------------------------------------
 
   private interactBeggar(npc: NPC) {
@@ -417,7 +417,7 @@ export class MountainScene extends Phaser.Scene {
   }
 
   // ---------------------------------------------------------------------------
-  // Beatitude 2 — Widow (those who mourn)
+  // Beatitude 2: Widow (those who mourn)
   // ---------------------------------------------------------------------------
 
   private interactWidow(npc: NPC) {
@@ -464,7 +464,7 @@ export class MountainScene extends Phaser.Scene {
   }
 
   // ---------------------------------------------------------------------------
-  // Beatitude 3 — Child (the meek)
+  // Beatitude 3: Child (the meek)
   // ---------------------------------------------------------------------------
 
   private interactChild(npc: NPC) {
@@ -505,7 +505,7 @@ export class MountainScene extends Phaser.Scene {
   }
 
   // ---------------------------------------------------------------------------
-  // Beatitude 4 — Scribe (hunger for righteousness)
+  // Beatitude 4: Scribe (hunger for righteousness)
   // ---------------------------------------------------------------------------
 
   private interactScribe(npc: NPC) {
@@ -548,7 +548,7 @@ export class MountainScene extends Phaser.Scene {
   }
 
   // ---------------------------------------------------------------------------
-  // Beatitude 5 — Merchant (the merciful)
+  // Beatitude 5: Merchant (the merciful)
   // ---------------------------------------------------------------------------
 
   private interactMerchant(npc: NPC) {
@@ -595,7 +595,7 @@ export class MountainScene extends Phaser.Scene {
   }
 
   // ---------------------------------------------------------------------------
-  // Beatitude 6 — Shepherd (pure in heart)
+  // Beatitude 6: Shepherd (pure in heart)
   // ---------------------------------------------------------------------------
 
   private interactShepherd(npc: NPC) {
@@ -641,7 +641,7 @@ export class MountainScene extends Phaser.Scene {
   }
 
   // ---------------------------------------------------------------------------
-  // Beatitude 7 — Peacemaker (two men almost fighting)
+  // Beatitude 7: Peacemaker (two men almost fighting)
   // ---------------------------------------------------------------------------
 
   private interactPeacemaker(npc: NPC) {
@@ -652,7 +652,7 @@ export class MountainScene extends Phaser.Scene {
     const save = loadSave();
     this.encounter.start({
       npcName: 'Two Men',
-      situation: 'Two men at the edge of the crowd are on the verge of a fight — voices raised, fists clenched.',
+      situation: 'Two men at the edge of the crowd are on the verge of a fight, voices raised, fists clenched.',
       onChoice: (action: EncounterAction) => {
         applyEncounterChoice(save, action);
         let lines: Array<{ speaker: string; text: string }>;
@@ -694,7 +694,7 @@ export class MountainScene extends Phaser.Scene {
   }
 
   // ---------------------------------------------------------------------------
-  // Beatitude 8 — Follower (persecuted)
+  // Beatitude 8: Follower (persecuted)
   // ---------------------------------------------------------------------------
 
   private interactFollower(npc: NPC) {
@@ -705,7 +705,7 @@ export class MountainScene extends Phaser.Scene {
     const save = loadSave();
     this.encounter.start({
       npcName: npc.npcName,
-      situation: 'A man with bruises on his face stands quietly at the edge — beaten yesterday for following Jesus.',
+      situation: 'A man with bruises on his face stands quietly at the edge, beaten yesterday for following Jesus.',
       onChoice: (action: EncounterAction) => {
         applyEncounterChoice(save, action);
         let lines: Array<{ speaker: string; text: string }>;
@@ -772,7 +772,7 @@ export class MountainScene extends Phaser.Scene {
   private completeSermon() {
     this.dialogue.start({
       lines: [
-        { speaker: 'Jesus', text: 'You have seen the kingdom lived. Now go — and do likewise.', nameColor: '0xf0c840' },
+        { speaker: 'Jesus', text: 'You have seen the kingdom lived. Now go, and do likewise.', nameColor: '0xf0c840' },
       ],
       onComplete: () => {
         let save = loadSave();

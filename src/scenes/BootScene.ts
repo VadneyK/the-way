@@ -51,7 +51,7 @@ export class BootScene extends Phaser.Scene {
 
   private generateSprites() {
     this.generatePlayerTexture();
-    // Each NPC gets distinct robes + hair — EarthBound-style pixel art
+    // Each NPC gets distinct robes + hair: EarthBound-style pixel art
     this.generateNPCTexture('andrew',    0x8b5e3c, 0x3a2010); // brown robe, dark hair
     this.generateNPCTexture('peter',     0x3a6090, 0x6a3a10); // blue robe, auburn
     this.generateNPCTexture('jesus',     0xf0ebe0, 0x5a3a18); // cream robe, light brown

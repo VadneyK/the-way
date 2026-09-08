@@ -81,7 +81,7 @@ export class CapernaumScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Sky — warm Mediterranean morning
+    // Sky: warm Mediterranean morning
     g.fillGradientStyle(0x7ec8f0, 0x7ec8f0, 0xe8c878, 0xe8c878);
     g.fillRect(0, 0, MAP_W, 36);
 
@@ -96,7 +96,7 @@ export class CapernaumScene extends Phaser.Scene {
       }
     }
 
-    // Dock area (water — bright Sea of Galilee blue)
+    // Dock area (water: bright Sea of Galilee blue)
     g.fillStyle(0x3a78c8);
     g.fillRect(0, 160, MAP_W, MAP_H - 160);
     // Water shimmer
@@ -106,7 +106,7 @@ export class CapernaumScene extends Phaser.Scene {
       g.fillRect(x + 9, 172, 8, 2);
     }
 
-    // Dock planks — warm wood
+    // Dock planks: warm wood
     g.fillStyle(0x9a6a3a);
     g.fillRect(0, 156, MAP_W, 10);
     g.fillStyle(0x7a5028);
@@ -115,7 +115,7 @@ export class CapernaumScene extends Phaser.Scene {
       g.fillRect(x, 161, 18, 1);
     }
 
-    // Stone path down the center — lighter limestone
+    // Stone path down the center: lighter limestone
     g.fillStyle(0xb8a888);
     g.fillRect(140, 36, 40, 124);
     // Path cobblestone marks
@@ -152,7 +152,7 @@ export class CapernaumScene extends Phaser.Scene {
     this.drawTree(g, 280, 70);
     this.drawTree(g, 50, 130);
 
-    // Synagogue entrance (north center — arched stone doorway)
+    // Synagogue entrance (north center: arched stone doorway)
     g.fillStyle(0x9a8870);
     g.fillRect(136, 30, 48, 20);        // doorway lintel
     g.fillStyle(0x1a120a);
@@ -180,7 +180,7 @@ export class CapernaumScene extends Phaser.Scene {
     g.fillEllipse(196, 95, 8, 6);
     g.fillEllipse(208, 97, 6, 5);
 
-    // Collision walls — x,y = top-left corner (matching drawHouse/fillRect coords)
+    // Collision walls: x,y = top-left corner (matching drawHouse/fillRect coords)
     this.addWall(0,   158, MAP_W, 6);  // water edge full width
     this.addWall(20,  50,  32, 24);    // left house 1
     this.addWall(20,  100, 32, 24);    // left house 2
@@ -192,7 +192,7 @@ export class CapernaumScene extends Phaser.Scene {
   }
 
   private addWall(x: number, y: number, w: number, h: number) {
-    // Use Rectangle (not Zone) — has reliable width/height for physics bodies
+    // Use Rectangle (not Zone): has reliable width/height for physics bodies
     const r = this.add.rectangle(x + w / 2, y + h / 2, w, h, 0x000000, 0);
     this.physics.add.existing(r, true);
     (r.body as Phaser.Physics.Arcade.StaticBody).setSize(w, h);
@@ -207,11 +207,11 @@ export class CapernaumScene extends Phaser.Scene {
     const WALL_FRAME  = 26; // brown brick wall  (row 2, col 2)
     const ROOF_FRAME  = 38; // roof tile          (row 3, col 2)
 
-    // Roof row — sits at the top of the house
+    // Roof row: sits at the top of the house
     this.add.image(x,      y, 'kenney-town', ROOF_FRAME).setOrigin(0, 0);
     this.add.image(x + 16, y, 'kenney-town', ROOF_FRAME).setOrigin(0, 0);
 
-    // Wall row — base of the house
+    // Wall row: base of the house
     this.add.image(x,      y + 16, 'kenney-town', WALL_FRAME).setOrigin(0, 0);
     this.add.image(x + 16, y + 16, 'kenney-town', WALL_FRAME).setOrigin(0, 0);
   }
@@ -260,7 +260,7 @@ export class CapernaumScene extends Phaser.Scene {
     // Trunk
     g.fillStyle(0x5a3a1a);
     g.fillRect(x - 1, y, 3, 8);
-    // Foliage (olive tree — irregular)
+    // Foliage (olive tree: irregular)
     g.fillStyle(0x5a7a3a);
     g.fillEllipse(x, y - 2, 12, 8);
     g.fillEllipse(x - 4, y, 8, 6);
@@ -270,12 +270,12 @@ export class CapernaumScene extends Phaser.Scene {
   }
 
   private createPlayer() {
-    // Start in the village path, north of the dock — player walks south toward Andrew
+    // Start in the village path, north of the dock: player walks south toward Andrew
     this.player = new Player(this, 160, 95);
   }
 
   private createNPCs() {
-    // Andrew — on the dock, slightly left of center so player can walk up behind him
+    // Andrew: on the dock, slightly left of center so player can walk up behind him
     const andrew = new NPC(this, { key: 'andrew', name: 'Andrew', x: 148, y: 154 });
     // Atmosphere NPCs
     const villager1 = new NPC(this, { key: 'andrew',    name: 'Villager',  x: 40,  y: 85 });
@@ -298,13 +298,13 @@ export class CapernaumScene extends Phaser.Scene {
     g.lineStyle(1, 0xc9a84c, 0.5);
     g.lineBetween(0, BAR_H, 320, BAR_H);
 
-    // Left section — Faith level as filled/empty pip dots
+    // Left section: Faith level as filled/empty pip dots
     const faithLevel = Math.min(save.faithLevel, 5);
     this.add.text(5, 4, 'FAITH', {
       fontFamily: '"Press Start 2P", monospace',
       fontSize: '6px', color: '#c9a84c', resolution: 3,
     }).setScrollFactor(0).setDepth(D);
-    // Draw 5 small pips as graphics — more reliable than unicode hearts
+    // Draw 5 small pips as graphics: more reliable than unicode hearts
     for (let i = 0; i < 5; i++) {
       const filled = i < faithLevel;
       g.fillStyle(filled ? 0xe05050 : 0x3a2020);
@@ -315,14 +315,14 @@ export class CapernaumScene extends Phaser.Scene {
       }
     }
 
-    // Center — LOVE counter
+    // Center: LOVE counter
     const loveColor = save.love >= 10 ? '#f5c842' : save.love >= 5 ? '#88cc88' : '#c9a84c';
     this.add.text(160, 4, `LOVE  ${save.love}`, {
       fontFamily: '"Press Start 2P", monospace',
       fontSize: '7px', color: loveColor, resolution: 3,
     }).setOrigin(0.5, 0).setScrollFactor(0).setDepth(D);
 
-    // Right — control hint
+    // Right: control hint
     this.add.text(315, 4, 'Z: TALK', {
       fontFamily: '"Press Start 2P", monospace',
       fontSize: '6px', color: '#5a4530', resolution: 3,
@@ -346,7 +346,7 @@ export class CapernaumScene extends Phaser.Scene {
 
   private playAmbientIntro() {
     this.time.delayedCall(1500, () => {
-      // Screen-space whisper bubble — centered near top of play area
+      // Screen-space whisper bubble: centered near top of play area
       const bg = this.add.graphics().setScrollFactor(0).setDepth(49);
       const txt = this.add.text(160, 42,
         '"Have you heard about the teacher from Nazareth?"',
@@ -406,7 +406,7 @@ export class CapernaumScene extends Phaser.Scene {
       return;
     }
 
-    // Scroll Room queued — trigger on next clear frame
+    // Scroll Room queued: trigger on next clear frame
     if (this.scrollRoomQueued) {
       const key = this.scrollRoomQueued;
       this.scrollRoomQueued = null;
@@ -423,7 +423,7 @@ export class CapernaumScene extends Phaser.Scene {
       if (nearby) this.interactWith(nearby);
     }
 
-    // Scene exits — only allow after Andrew has been met (tutorial gating)
+    // Scene exits: only allow after Andrew has been met (tutorial gating)
     if (!this.transitioning && this.andrewMet) {
       // North exit → Synagogue (walk through the doorway)
       if (this.player.y < 38 && this.player.x > 136 && this.player.x < 184) {

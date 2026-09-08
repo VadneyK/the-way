@@ -85,7 +85,7 @@ export class UpperRoomScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Background — warm stone
+    // Background: warm stone
     g.fillStyle(0x1a1208);
     g.fillRect(0, 0, MAP_W, MAP_H);
 
@@ -93,7 +93,7 @@ export class UpperRoomScene extends Phaser.Scene {
     g.fillStyle(0x120e07);
     g.fillRect(0, 0, MAP_W, 20);
 
-    // Floor — wooden
+    // Floor: wooden
     g.fillStyle(0x3a2818);
     g.fillRect(0, 60, MAP_W, MAP_H - 60);
     // Wooden planks
@@ -135,14 +135,14 @@ export class UpperRoomScene extends Phaser.Scene {
       g.fillStyle(0xd4a870);
     }
 
-    // Cup in center — wine red
+    // Cup in center: wine red
     g.fillEllipse(160, 72, 8, 12);
     g.fillStyle(0xb04020);
     g.fillEllipse(160, 72, 8, 12);
     g.fillStyle(0xd05030);
     g.fillEllipse(160, 70, 7, 5);
 
-    // Oil lamps on walls — orange dots at corners
+    // Oil lamps on walls: orange dots at corners
     const lampPositions = [[16, 30], [304, 30], [16, 140], [304, 140]];
     for (const [lx, ly] of lampPositions) {
       g.fillStyle(0xff8820);
@@ -154,7 +154,7 @@ export class UpperRoomScene extends Phaser.Scene {
       g.fillCircle(lx, ly, 12);
     }
 
-    // Wall details — stone blocks
+    // Wall details: stone blocks
     g.fillStyle(0x221a10);
     for (let y = 0; y < 60; y += 14) {
       for (let x = 0; x < MAP_W; x += 28) {
@@ -248,7 +248,7 @@ export class UpperRoomScene extends Phaser.Scene {
         break;
 
       case 'serve':
-        // REFUSE — then immediate receive
+        // REFUSE: then immediate receive
         this.dialogue.start({
           lines: [
             {
@@ -276,7 +276,7 @@ export class UpperRoomScene extends Phaser.Scene {
         break;
 
       case 'pray':
-        // WEEP — beautiful moment, camera flash gold
+        // WEEP: beautiful moment, camera flash gold
         this.cameras.main.flash(400, 240, 200, 80, true);
         this.time.delayedCall(500, () => {
           this.dialogue.start({
@@ -293,7 +293,7 @@ export class UpperRoomScene extends Phaser.Scene {
         break;
 
       case 'pass':
-        // FREEZE — Peter speaks
+        // FREEZE: Peter speaks
         this.dialogue.start({
           lines: [
             {

@@ -112,7 +112,7 @@ export class SeaScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Sky — warm gold gradient (top 0xe8c060, bottom 0x7ab8e0, 30px)
+    // Sky: warm gold gradient (top 0xe8c060, bottom 0x7ab8e0, 30px)
     g.fillGradientStyle(0xe8c060, 0xe8c060, 0x7ab8e0, 0x7ab8e0);
     g.fillRect(0, 0, MAP_W, 30);
 
@@ -140,7 +140,7 @@ export class SeaScene extends Phaser.Scene {
       g.fillRect(a.x, 26, b.x - a.x, b.h);
     }
 
-    // Shore/beach — sandy (0xdcba7a), y=44 to y=88
+    // Shore/beach: sandy (0xdcba7a), y=44 to y=88
     g.fillStyle(0xdcba7a);
     g.fillRect(0, 44, MAP_W, 44);
     // Sand texture
@@ -151,7 +151,7 @@ export class SeaScene extends Phaser.Scene {
       }
     }
 
-    // Water — deep blue (0x2a5fad) from y=80 to bottom
+    // Water: deep blue (0x2a5fad) from y=80 to bottom
     g.fillStyle(0x2a5fad);
     g.fillRect(0, 80, MAP_W, MAP_H - 80);
 
@@ -170,7 +170,7 @@ export class SeaScene extends Phaser.Scene {
     g.fillStyle(0xf5deb3);
     g.fillTriangle(200, 134, 218, 138, 200, 138);
 
-    this.addWall(0, 88, MAP_W, 4); // water edge wall — blocks deep water initially
+    this.addWall(0, 88, MAP_W, 4); // water edge wall, blocks deep water initially
   }
 
   private spawnCollectibles() {
@@ -286,7 +286,7 @@ export class SeaScene extends Phaser.Scene {
     this.player.frozen = true;
     this.dialogue.start({
       lines: [
-        { speaker: 'Boy', text: "Here — five loaves and two fish. It's all I have." },
+        { speaker: 'Boy', text: "Here, five loaves and two fish. It's all I have." },
         { speaker: 'Jesus', text: '"Bring them here to me."', nameColor: '0xf0c840' },
       ],
       onComplete: () => {
@@ -616,7 +616,7 @@ export class SeaScene extends Phaser.Scene {
       if (isMoving) {
         this.lastMovedTime = this.time.now;
       } else if (this.time.now - this.lastMovedTime > 1500) {
-        // Player stopped too long — sink!
+        // Player stopped too long: sink!
         this.triggerSinking();
         return;
       }
@@ -660,7 +660,7 @@ export class SeaScene extends Phaser.Scene {
         });
       } else {
         this.dialogue.start({
-          lines: [{ speaker: 'Peter', text: 'I saw it. He fed them all — five loaves, two fish. Nothing is impossible with him.' }],
+          lines: [{ speaker: 'Peter', text: 'I saw it. He fed them all, five loaves, two fish. Nothing is impossible with him.' }],
         });
       }
     } else {

@@ -82,7 +82,7 @@ export class TitleScene extends Phaser.Scene {
     div.lineStyle(1, 0xc9a84c, 0.5);
     div.lineBetween(width / 2 - 70, 38, width / 2 + 70, 38);
 
-    // Scripture — use a readable serif size
+    // Scripture: use a readable serif size
     this.add.text(width / 2, 52, '"I am the way,\nthe truth, and the life."', {
       fontFamily: 'Georgia, "Times New Roman", serif',
       fontSize: '13px',
@@ -92,7 +92,7 @@ export class TitleScene extends Phaser.Scene {
       resolution: 3,
     }).setOrigin(0.5);
 
-    this.add.text(width / 2, 73, '— John 14:6', {
+    this.add.text(width / 2, 73, ', John 14:6', {
       fontFamily: 'Georgia, "Times New Roman", serif',
       fontStyle: 'italic',
       fontSize: '11px',

@@ -14,7 +14,7 @@ interface ScrollCard {
 type CardKey = 'otRoot' | 'wordStudy' | 'narrativeArc' | 'newCreation' | 'deepDive';
 const CARD_KEYS: CardKey[] = ['otRoot', 'wordStudy', 'narrativeArc', 'newCreation', 'deepDive'];
 
-// Typography — all sizes in game pixels (canvas is 320×180, displayed at 3× zoom)
+// Typography: all sizes in game pixels (canvas is 320×180, displayed at 3× zoom)
 const SERIF   = 'Georgia, "Times New Roman", serif';
 const PIXEL   = '"Press Start 2P", monospace';
 

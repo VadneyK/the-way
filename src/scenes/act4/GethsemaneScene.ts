@@ -78,7 +78,7 @@ export class GethsemaneScene extends Phaser.Scene {
       this.cameras.main.startFollow(this.player, true, 0.1, 0.1);
       this.physics.world.setBounds(0, 0, MAP_W, MAP_H);
 
-      // Awake prompt text — hidden until needed
+      // Awake prompt text: hidden until needed
       this.awakePromptText = this.add.text(160, 130, '[Press SPACE to stay awake]', {
         fontFamily: '"Press Start 2P", monospace',
         fontSize: '6px',
@@ -90,7 +90,7 @@ export class GethsemaneScene extends Phaser.Scene {
       this.drawHUD();
       this.drawLocationLabel();
       fadeIn(this, 900);
-      // No music — just silence and ambient darkness
+      // No music: just silence and ambient darkness
 
       // Suppress unused import warnings
       void holyFlash;
@@ -133,11 +133,11 @@ export class GethsemaneScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Sky — very dark purple-black
+    // Sky: very dark purple-black
     g.fillStyle(0x08060f);
     g.fillRect(0, 0, MAP_W, MAP_H);
 
-    // Stars — 20 dim fixed points in upper 60px
+    // Stars: 20 dim fixed points in upper 60px
     const starPositions = [
       [12, 8], [30, 15], [55, 5], [72, 22], [90, 10],
       [110, 18], [135, 4], [152, 28], [170, 12], [188, 6],
@@ -154,15 +154,15 @@ export class GethsemaneScene extends Phaser.Scene {
     g.fillRect(170, 12, 1, 1);
     g.fillRect(258, 14, 1, 1);
 
-    // Moonlight shaft — subtle rectangle down from top-center
+    // Moonlight shaft: subtle rectangle down from top-center
     g.fillStyle(0x1e2010, 0.3);
     g.fillRect(140, 0, 40, MAP_H);
 
-    // Ground — dark olive garden, y=60 to 240
+    // Ground: dark olive garden, y=60 to 240
     g.fillStyle(0x1a1e0a);
     g.fillRect(0, 60, MAP_W, MAP_H - 60);
 
-    // Stone path — dim, winding from south to center
+    // Stone path: dim, winding from south to center
     g.fillStyle(0x2a2418);
     // Winding path: south → center
     g.fillRect(148, 180, 24, 60);
@@ -171,7 +171,7 @@ export class GethsemaneScene extends Phaser.Scene {
     g.fillRect(154, 90, 14, 35);
     g.fillRect(152, 60, 16, 35);
 
-    // Olive trees — 7 large dark silhouettes
+    // Olive trees: 7 large dark silhouettes
     this.drawOliveTree(g, 30,  90);
     this.drawOliveTree(g, 80,  75);
     this.drawOliveTree(g, 50,  145);
@@ -185,7 +185,7 @@ export class GethsemaneScene extends Phaser.Scene {
     // Trunk
     g.fillStyle(0x0a0804);
     g.fillRect(x - 3, y, 6, 22);
-    // Foliage — layered ellipses for gnarled olive shape
+    // Foliage: layered ellipses for gnarled olive shape
     g.fillStyle(0x0e1206);
     g.fillEllipse(x, y - 10, 36, 28);
     g.fillEllipse(x - 8, y - 4, 22, 18);
@@ -198,16 +198,16 @@ export class GethsemaneScene extends Phaser.Scene {
   }
 
   private createNPCs() {
-    // Jesus — apart, near center-north, kneeling suggested (lower depth)
+    // Jesus: apart, near center-north, kneeling suggested (lower depth)
     const jesus = new NPC(this, { key: 'jesus', name: 'Jesus', x: 160, y: 80 });
 
-    // Disciples — can talk before dozing
+    // Disciples: can talk before dozing
     this.peter  = new NPC(this, { key: 'peter',  name: 'Peter',  x: 100, y: 160 });
     this.andrew = new NPC(this, { key: 'andrew', name: 'Andrew', x: 130, y: 170 });
 
-    // Judas — at the east edge, in shadow; starts non-interactable
+    // Judas: at the east edge, in shadow; starts non-interactable
     this.judas = new NPC(this, { key: 'judas', name: 'Judas', x: 280, y: 60 });
-    // Make judas very dim initially — lurking in shadow
+    // Make judas very dim initially: lurking in shadow
     this.judas.setAlpha(0.25);
 
     this.npcs = [jesus, this.peter, this.andrew, this.judas];
@@ -217,7 +217,7 @@ export class GethsemaneScene extends Phaser.Scene {
     const save = loadSave();
     const BAR_H = 18;
     const D = 201;
-    // Nearly invisible HUD — this scene should feel different
+    // Nearly invisible HUD: this scene should feel different
     const g = this.add.graphics().setScrollFactor(0).setDepth(200);
 
     g.fillStyle(0x080604, 0.35);
@@ -250,7 +250,7 @@ export class GethsemaneScene extends Phaser.Scene {
   }
 
   private drawLocationLabel() {
-    // Appears and never fades — quiet title
+    // Appears and never fades: quiet title
     this.add.text(160, 25, 'GETHSEMANE', {
       fontFamily: '"Press Start 2P", monospace',
       fontSize: '7px', color: '#3a3428', resolution: 3,
@@ -283,7 +283,7 @@ export class GethsemaneScene extends Phaser.Scene {
     if (this.dozeSequenceActive && !this.dozeSequenceDone) {
       this.dozeTimer += delta;
 
-      // Awake prompt window — player has 3000ms to press Space
+      // Awake prompt window: player has 3000ms to press Space
       if (this.awakePromptVisible) {
         this.awakeWindow -= delta;
 
@@ -331,7 +331,7 @@ export class GethsemaneScene extends Phaser.Scene {
               });
             });
           } else {
-            // Third doze — "The hour has come"
+            // Third doze: "The hour has come"
             this.dozeSequenceDone = true;
             this.player.frozen = true;
             this.time.delayedCall(400, () => {
@@ -403,7 +403,7 @@ export class GethsemaneScene extends Phaser.Scene {
     if (this.judasEntryDone) return;
     this.judasEntryDone = true;
 
-    // Judas walks in from east — brighten him, animate x position
+    // Judas walks in from east: brighten him, animate x position
     this.judas.setAlpha(0.8);
     const startX = 310;
     this.judas.setX(startX);
@@ -420,7 +420,7 @@ export class GethsemaneScene extends Phaser.Scene {
             { speaker: 'Judas', text: 'Rabbi!' },
           ],
           onComplete: () => {
-            // Judas kisses Jesus — red flash
+            // Judas kisses Jesus: red flash
             this.cameras.main.flash(300, 80, 0, 0);
             this.time.delayedCall(500, () => {
               this.dialogue.start({
@@ -443,7 +443,7 @@ export class GethsemaneScene extends Phaser.Scene {
   }
 
   private scatterDisciples() {
-    // Crowd implied — screen flashes, disciples scatter
+    // Crowd implied: screen flashes, disciples scatter
     this.cameras.main.flash(200, 40, 30, 20);
 
     const scatterText = this.add.text(160, 110, 'The disciples scatter into the dark.', {

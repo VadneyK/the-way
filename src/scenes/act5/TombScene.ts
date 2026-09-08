@@ -72,7 +72,7 @@ export class TombScene extends Phaser.Scene {
       this.cameras.main.startFollow(this.player, true, 0.1, 0.1);
       this.physics.world.setBounds(0, 0, MAP_W, MAP_H);
 
-      // Very slow fade in — deep dark
+      // Very slow fade in: deep dark
       this.cameras.main.fadeIn(5000, 10, 8, 6);
 
       this.drawHUD();
@@ -97,7 +97,7 @@ export class TombScene extends Phaser.Scene {
         this.drawLocationLabel();
       });
 
-      // No music track for Tomb — silence at dawn
+      // No music track for Tomb: silence at dawn
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message + '\n' + (err.stack ?? '') : String(err);
       this.add.text(160, 90, 'SCENE ERROR:\n' + msg, {
@@ -110,17 +110,17 @@ export class TombScene extends Phaser.Scene {
   }
 
   private buildMap() {
-    // Sky — drawn each frame via dawnProgress, initialised dark
+    // Sky: drawn each frame via dawnProgress, initialised dark
     this.skyGraphics = this.add.graphics().setDepth(0);
 
-    // Static ground — garden path, stone
+    // Static ground: garden path, stone
     const g = this.add.graphics().setDepth(1);
 
     // Ground
     g.fillStyle(0x3a2e22);
     g.fillRect(0, 80, MAP_W, MAP_H - 80);
 
-    // Garden path — lighter sandy strip
+    // Garden path: lighter sandy strip
     g.fillStyle(0x4e3e2c);
     g.fillRect(40, 100, 200, 20);
 
@@ -138,14 +138,14 @@ export class TombScene extends Phaser.Scene {
     g.fillStyle(0x1a1410);
     g.fillRect(120, 60, 80, 60);
 
-    // Rolled-away stone — ellipse off to the right side
+    // Rolled-away stone: ellipse off to the right side
     g.fillStyle(0x5a5040);
     g.fillEllipse(230, 110, 38, 32);
     // Stone shadow
     g.fillStyle(0x3a3428, 0.6);
     g.fillEllipse(234, 114, 36, 10);
 
-    // Flowers placeholder — will be drawn progressively
+    // Flowers placeholder: will be drawn progressively
     this.flowerGraphics = this.add.graphics().setDepth(2);
   }
 
@@ -246,7 +246,7 @@ export class TombScene extends Phaser.Scene {
           { speaker: 'Mary', text: '...It is empty.' },
           {
             speaker: 'Angel',
-            text: '"Why do you seek the living among the dead? He is not here — he is risen."',
+            text: '"Why do you seek the living among the dead? He is not here, he is risen."',
             nameColor: '0xffffff',
           },
         ],
@@ -294,7 +294,7 @@ export class TombScene extends Phaser.Scene {
     this.time.delayedCall(500, () => {
       holyFlash(this);
 
-      // Dawn completes fully — sky goes bright gold
+      // Dawn completes fully: sky goes bright gold
       this.dawnProgress = 1;
 
       this.revealHUD();

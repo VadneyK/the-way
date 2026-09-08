@@ -95,11 +95,11 @@ export class CanaScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Sky — bright warm gradient (30px tall)
+    // Sky: bright warm gradient (30px tall)
     g.fillGradientStyle(0x7ec8f0, 0x7ec8f0, 0xe8d890, 0xe8d890);
     g.fillRect(0, 0, MAP_W, 30);
 
-    // Ground — warm stone courtyard
+    // Ground: warm stone courtyard
     g.fillStyle(0xc8b890);
     g.fillRect(0, 30, MAP_W, 130); // 30 to 160
 
@@ -150,7 +150,7 @@ export class CanaScene extends Phaser.Scene {
     g.fillStyle(0x6a5830);
     g.fillRect(155, 28, 10, 6);
 
-    // Wedding tables — center area, long rectangle
+    // Wedding tables: center area, long rectangle
     // Main banquet table
     g.fillStyle(0x9a7850);
     g.fillRect(60, 85, 200, 22);
@@ -161,7 +161,7 @@ export class CanaScene extends Phaser.Scene {
     g.fillStyle(0xf0e0c0, 0.75);
     g.fillRect(62, 86, 196, 18);
 
-    // People sitting at table — small sprite-like rectangles
+    // People sitting at table: small sprite-like rectangles
     const personColors = [0xe8c8a0, 0xd4a878, 0xc89060, 0xe0b890];
     const personPositions = [75, 100, 125, 155, 180, 205, 230];
     personPositions.forEach((px, idx) => {
@@ -169,12 +169,12 @@ export class CanaScene extends Phaser.Scene {
       // Head
       g.fillStyle(col);
       g.fillCircle(px, 84, 4);
-      // Body (above table — shown as upper torso)
+      // Body (above table: shown as upper torso)
       g.fillStyle(col - 0x101010 < 0 ? col : col - 0x101010);
       g.fillRect(px - 4, 78, 8, 7);
     });
 
-    // Second smaller table — back
+    // Second smaller table: back
     g.fillStyle(0x9a7850);
     g.fillRect(80, 60, 160, 14);
     g.fillStyle(0xb08a60);
@@ -284,7 +284,7 @@ export class CanaScene extends Phaser.Scene {
     // Shadow
     g.fillStyle(0x5a4028, 0.4);
     g.fillEllipse(x + 2, y + 7, 12, 4);
-    // Body — 8×12 ellipse
+    // Body: 8×12 ellipse
     g.fillStyle(wine ? 0x8a2020 : 0x8a9090);
     g.fillEllipse(x, y, 8, 12);
     // Neck
@@ -380,7 +380,7 @@ export class CanaScene extends Phaser.Scene {
       // Villager ambient lines
       const lines = [
         [{ speaker: 'Villager', text: 'What a wonderful wedding! The best I have attended in years.' }],
-        [{ speaker: 'Villager', text: 'Seven days of feasting — God bless this couple!' }],
+        [{ speaker: 'Villager', text: 'Seven days of feasting, God bless this couple!' }],
         [{ speaker: 'Villager', text: 'Have you tried the bread? Freshly baked this morning.' }],
       ];
       this.dialogue.start({ lines: lines[Math.floor(Math.random() * lines.length)] });
@@ -397,7 +397,7 @@ export class CanaScene extends Phaser.Scene {
       return;
     }
 
-    // Determine intro lines — act1Data may not have water_to_wine_intro yet
+    // Determine intro lines: act1Data may not have water_to_wine_intro yet
     type DialogueLine = { speaker: string; text: string; nameColor?: string };
     const act1Any = act1Data as unknown as Record<string, DialogueLine[]>;
     const introLines: DialogueLine[] = act1Any.water_to_wine_intro
@@ -545,7 +545,7 @@ export class CanaScene extends Phaser.Scene {
   }
 
   private drawLocationLabel() {
-    const label = this.add.text(160, 25, 'CANA — WEDDING FEAST', {
+    const label = this.add.text(160, 25, 'CANA, WEDDING FEAST', {
       fontFamily: '"Press Start 2P", monospace',
       fontSize: '6px', color: '#f5deb3', resolution: 3,
     }).setOrigin(0.5).setScrollFactor(0).setDepth(201);
@@ -592,7 +592,7 @@ export class CanaScene extends Phaser.Scene {
       return;
     }
 
-    // Scroll Room queued — launch on a clear frame
+    // Scroll Room queued: launch on a clear frame
     if (this.scrollRoomQueued) {
       const key = this.scrollRoomQueued;
       this.scrollRoomQueued = null;
@@ -600,7 +600,7 @@ export class CanaScene extends Phaser.Scene {
       return;
     }
 
-    // Return to Capernaum — walk south off map
+    // Return to Capernaum: walk south off map
     if (this.player.y > 195) {
       this.cameras.main.fadeOut(400, 0, 0, 0);
       this.cameras.main.once('camerafadeoutcomplete', () => {

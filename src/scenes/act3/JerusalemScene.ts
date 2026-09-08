@@ -80,18 +80,18 @@ export class JerusalemScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics();
 
-    // Sky — azure blue gradient
+    // Sky: azure blue gradient
     g.fillGradientStyle(0x4a90d0, 0x4a90d0, 0x8ec8f0, 0x8ec8f0);
     g.fillRect(0, 0, MAP_W, 30);
 
-    // Ground — warm Jerusalem limestone
+    // Ground: warm Jerusalem limestone
     g.fillStyle(0xd4c090);
     g.fillRect(0, 30, MAP_W, MAP_H - 30);
 
-    // Temple mount background — tall rectangle at top center
+    // Temple mount background: tall rectangle at top center
     g.fillStyle(0x9a8060);
     g.fillRect(80, 30, 160, 50);
-    // Temple detail — columns hint
+    // Temple detail: columns hint
     g.fillStyle(0xb0986e);
     for (let cx = 90; cx <= 220; cx += 20) {
       g.fillRect(cx, 30, 6, 50);
@@ -100,7 +100,7 @@ export class JerusalemScene extends Phaser.Scene {
     g.fillStyle(0x7a6040);
     g.fillRect(76, 28, 168, 6);
 
-    // Stone road down center — 40px wide
+    // Stone road down center: 40px wide
     g.fillStyle(0xb8a878);
     g.fillRect(140, 30, 40, MAP_H - 30);
     // Road cobblestone marks
@@ -110,7 +110,7 @@ export class JerusalemScene extends Phaser.Scene {
       g.fillRect(158, y + 7, 9, 5);
     }
 
-    // Crowd of implied NPCs — 40 small ellipses scattered across y=80-180
+    // Crowd of implied NPCs: 40 small ellipses scattered across y=80-180
     g.fillStyle(0xd4a870);
     const crowdPositions = [
       [30,90],[50,100],[45,120],[60,130],[35,145],[80,85],[90,110],[85,140],
@@ -282,7 +282,7 @@ export class JerusalemScene extends Phaser.Scene {
             save = applyEncounterChoice(save, action);
             writeSave(save);
             this.phariseeEncounterDone = true;
-            // Pharisee storms off — dialogue from Peter
+            // Pharisee storms off: dialogue from Peter
             this.time.delayedCall(400, () => {
               this.dialogue.start({
                 lines: [

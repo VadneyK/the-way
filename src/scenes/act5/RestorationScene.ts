@@ -91,7 +91,7 @@ export class RestorationScene extends Phaser.Scene {
   private buildMap() {
     const g = this.add.graphics().setDepth(0);
 
-    // Sky — soft pink-gold to blue, 40px
+    // Sky: soft pink-gold to blue, 40px
     g.fillGradientStyle(0xf0d080, 0xf0d080, 0x8ac8e8, 0x8ac8e8);
     g.fillRect(0, 0, MAP_W, 40);
 
@@ -101,17 +101,17 @@ export class RestorationScene extends Phaser.Scene {
     g.fillEllipse(200, 65, 140, 28);
     g.fillEllipse(300, 70, 90, 22);
 
-    // Beach — sandy
+    // Beach: sandy
     g.fillStyle(0xdcba7a);
     g.fillRect(0, 68, MAP_W, 47);
 
-    // Beach texture — subtle variation
+    // Beach texture: subtle variation
     g.fillStyle(0xd0ae6e, 0.4);
     for (let bx = 5; bx < MAP_W; bx += 22) {
       g.fillEllipse(bx, 75 + Math.floor(Math.sin(bx * 0.15) * 4), 14, 5);
     }
 
-    // Water — calm blue
+    // Water: calm blue
     g.fillStyle(0x5a9ac8);
     g.fillRect(0, 115, MAP_W, MAP_H - 115);
 
@@ -150,7 +150,7 @@ export class RestorationScene extends Phaser.Scene {
     this.fireGraphics.fillStyle(0xff6600, 0.15 * flicker);
     this.fireGraphics.fillCircle(160, 103, 14);
 
-    // Fish on fire — simple marks
+    // Fish on fire: simple marks
     this.fireGraphics.fillStyle(0xb0805a);
     this.fireGraphics.fillEllipse(148, 108, 12, 4);
     this.fireGraphics.fillEllipse(167, 107, 10, 4);
@@ -275,7 +275,7 @@ export class RestorationScene extends Phaser.Scene {
         },
       ],
       onComplete: () => {
-        // PAUSE — 3 seconds of silence. Fire crackles. Then fourth-wall break.
+        // PAUSE: 3 seconds of silence. Fire crackles. Then fourth-wall break.
         this.time.delayedCall(3000, () => {
           this.startFourthWallMoment();
         });
@@ -311,7 +311,7 @@ export class RestorationScene extends Phaser.Scene {
     this.encounter.start({
       npcName: 'Jesus',
       npcTextureKey: 'jesus',
-      situation: `He has asked you three times. The fire crackles. Peter weeps. And now he turns — and looks at you.\n\nYour record: ${save.love} acts of love.`,
+      situation: `He has asked you three times. The fire crackles. Peter weeps. And now he turns, and looks at you.\n\nYour record: ${save.love} acts of love.`,
       options: [
         { action: 'listen', label: 'YES, LORD',    description: 'You know that I love you.' },
         { action: 'serve',  label: 'I HAVE TRIED', description: 'Imperfectly. But I have tried.' },
@@ -411,7 +411,7 @@ export class RestorationScene extends Phaser.Scene {
       g.fillEllipse(cx - 10, cy - 52, 30, 24);
       g.fillStyle(0x60c848);
       g.fillEllipse(cx + 12, cy - 50, 28, 22);
-      // Golden highlights — Tree of Life
+      // Golden highlights: Tree of Life
       g.fillStyle(0xf0d060, 0.5);
       g.fillEllipse(cx, cy - 54, 20, 16);
       g.fillStyle(0xffd840, 0.3);
@@ -433,7 +433,7 @@ export class RestorationScene extends Phaser.Scene {
     bg.fillStyle(0x000000, 1);
     bg.fillRect(0, 0, MAP_W, MAP_H);
 
-    const title = this.add.text(160, 70, 'The Way — v0.1', {
+    const title = this.add.text(160, 70, 'The Way, v0.1', {
       fontFamily: '"Press Start 2P", monospace',
       fontSize: '8px', color: '#f5deb3', resolution: 3,
     }).setOrigin(0.5).setScrollFactor(0).setDepth(501).setAlpha(0);
@@ -485,7 +485,7 @@ export class RestorationScene extends Phaser.Scene {
       return;
     }
 
-    // NPC proximity checks (for visual only — scene is auto-driven)
+    // NPC proximity checks (for visual only: scene is auto-driven)
     if (!this.encounterDone) {
       this.peter.checkProximity(this.player.x, this.player.y);
       this.jesus.checkProximity(this.player.x, this.player.y);

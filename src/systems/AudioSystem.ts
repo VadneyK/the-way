@@ -1,6 +1,6 @@
 /**
  * Procedural ambient music via Web Audio API.
- * Silence is sacred — the most holy moments use silence(), not music.
+ * Silence is sacred: the most holy moments use silence(), not music.
  * No audio files required: everything is synthesised at runtime.
  */
 
@@ -175,7 +175,7 @@ export class AudioSystem {
     return convolver;
   }
 
-  /** Sacred silence — fade out all music */
+  /** Sacred silence, fade out all music */
   silence(fadeMs = 2000) {
     if (!this.masterGain || !this.ctx) return;
     const now = this.ctx.currentTime;
