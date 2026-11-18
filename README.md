@@ -4,7 +4,7 @@
 
 A deeply biblical, open-source pixel art RPG that helps you walk alongside Jesus Christ. Inspired by EarthBound/Mother, Undertale, The Chosen, and Bible Project.
 
-**Play it:** [kvadney-insomniac.github.io/the-way](https://kvadney-insomniac.github.io/the-way)
+**Play it:** [vadneyk.github.io/the-way](https://vadneyk.github.io/the-way/)
 
 ---
 
