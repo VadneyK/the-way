@@ -1,0 +1,18 @@
+# The Way
+
+> A free, open-source pixel art RPG that plays in the browser. The player follows Jesus through the Gospels, and every encounter is a choice: listen, serve, pray, or pass by. MIT license. No account and no install.
+
+Season 1, "The Son of Man", has five acts: Galilee, the Mountain, Jerusalem, the Passion and the Resurrection. Choices are tracked by the LOVE system (Level of Virtue Expressed), and the game never forces a choice. Each major story opens a Scroll Room with the Old Testament roots of the scene and a Hebrew or Greek word study. The page is a single canvas drawn by JavaScript, so the game itself has no readable text for a crawler; this file and the README describe it. Made by Kentaro Vadney. Sprite packs are credited in the README.
+
+## Play
+
+- [The Way](https://vadneyk.github.io/the-way/): the game, in the browser
+
+## Source and docs
+
+- [README](https://github.com/VadneyK/the-way#readme): what the game is, its structure, mechanics, inspirations and credits
+- [Source code](https://github.com/VadneyK/the-way): TypeScript and Phaser, MIT license
+
+## Optional
+
+- [About the author](https://vadneyk.github.io/portfolio/): Kentaro Vadney's projects page

@@ -3,7 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Way</title>
+    <title>The Way: an open-source pixel art RPG through the Gospels</title>
+    <meta name="description" content="A free, open-source pixel art RPG that plays in the browser. You follow Jesus through the Gospels, and every encounter is a choice: listen, serve, pray, or pass by." />
+    <link rel="canonical" href="https://vadneyk.github.io/the-way/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Way" />
+    <meta property="og:title" content="The Way: an open-source pixel art RPG through the Gospels" />
+    <meta property="og:description" content="A free, open-source pixel art RPG that plays in the browser. You follow Jesus through the Gospels, and every encounter is a choice: listen, serve, pray, or pass by." />
+    <meta property="og:url" content="https://vadneyk.github.io/the-way/" />
+    <meta property="og:image" content="https://vadneyk.github.io/the-way/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Title screen of The Way, a pixel art game" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "@id": "https://vadneyk.github.io/the-way/#game", "url": "https://vadneyk.github.io/the-way/", "name": "The Way", "description": "A free, open-source pixel art RPG that plays in the browser. You follow Jesus through the Gospels, and every encounter is a choice: listen, serve, pray, or pass by.", "genre": "Role-playing game", "gamePlatform": "Web browser", "applicationCategory": "Game", "operatingSystem": "Any (web browser)", "inLanguage": "en", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "license": "https://opensource.org/license/mit", "image": "https://vadneyk.github.io/the-way/og.jpg", "author": {"@type": "Person", "@id": "https://vadneyk.github.io/portfolio/#kentaro", "name": "Kentaro Vadney", "url": "https://vadneyk.github.io/portfolio/"}}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -24,6 +37,21 @@
     </style>
   </head>
   <body>
+    <!-- The game draws on a canvas, so this is the page's text for readers and crawlers that do not run scripts. -->
+    <noscript>
+      <main style="max-width: 40rem; padding: 2rem; color: #e8dcc0; font: 1.1rem/1.6 'Crimson Text', Georgia, serif;">
+        <h1>The Way</h1>
+        <p>The Way is a free, open-source pixel art RPG that plays in the browser. You follow Jesus through
+        the Gospels, not as a spectator, but as someone who was there. Every encounter is a choice: listen,
+        serve, pray, or pass by. The game never forces a choice, and it remembers the ones you make.</p>
+        <p>Season 1, "The Son of Man", has five acts: Galilee, the Mountain, Jerusalem, the Passion and the
+        Resurrection. Each major story opens a Scroll Room with its Old Testament roots and a Hebrew or Greek
+        word study.</p>
+        <p>The game needs JavaScript to run. The source code is on
+        <a style="color: #e8c070;" href="https://github.com/VadneyK/the-way">GitHub</a> under the MIT license.
+        Made by <a style="color: #e8c070;" href="https://vadneyk.github.io/portfolio/">Kentaro Vadney</a>.</p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
